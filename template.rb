@@ -28,6 +28,7 @@ def apply_template!
 
   apply 'variants/template.rb'
 
+  #dgleba
   # add additional Gems
   insert_into_file 'Gemfile', before: 'group :development, :test do' do
     <<-'RUBY'
@@ -36,6 +37,9 @@ def apply_template!
     RUBY
   end
 
+  copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
+
+  
   # run a final bundle update to have the latest and greatest version of all
   # before we initial commit
   run 'bundle update --quiet'
