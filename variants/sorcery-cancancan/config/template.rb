@@ -1,5 +1,5 @@
-apply 'variants/sorcery-cancancan/config/locales/nl.rb'
-apply 'variants/sorcery-cancancan/config/locales/en.rb'
+#apply 'variants/sorcery-cancancan/config/locales/nl.rb'
+# apply 'variants/sorcery-cancancan/config/locales/en.rb'
 
 # add routes for login
 insert_into_file 'config/routes.rb', after: "Rails.application.routes.draw do\n" do
