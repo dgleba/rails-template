@@ -19,7 +19,7 @@ def apply_template!
   # copy_file 'Procfile'
 
    apply 'app/template.rb'
-  # apply 'config/template.rb'
+   apply 'config/template.rb'
   # apply 'bin/template.rb'
    apply 'lib/template.rb'
   # apply 'vendor/template.rb'
@@ -31,13 +31,16 @@ def apply_template!
   #dgleba
   # add additional Gems
   insert_into_file 'Gemfile', before: 'group :development, :test do' do
-    <<-'RUBY'
-      # dgleba
-      gem 'sqlite3'
-    RUBY
+  <<-'RUBY'
+  # dgleba
+  gem 'sqlite3'
+  RUBY
   end
 
   copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
+  
+  # copy directory
+  #http://www.rubydoc.info/github/erikhuda/thor/master/Thor/Actions:directory
 
   
   # run a final bundle update to have the latest and greatest version of all
