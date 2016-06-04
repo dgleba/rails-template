@@ -4,9 +4,9 @@ def apply_variants
 
   # ask and apply other variants
   apply 'variants/twitter-bootstrap/template.rb'  if apply_twitter_bootstrap?
-  apply 'variants/sorcery-cancancan/template.rb'  if apply_sorcery_cancancan?
+  #apply 'variants/sorcery-cancancan/template.rb'  if apply_sorcery_cancancan?
   apply 'variants/ransack-kaminari/template.rb'   if apply_ransack_kaminari?
-  apply 'variants/sidekiq/template.rb'            if apply_sidekiq?
+  #apply 'variants/sidekiq/template.rb'            if apply_sidekiq?
 end
 
 def apply_twitter_bootstrap?
