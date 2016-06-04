@@ -49,7 +49,7 @@ group :development, :test do
 #  gem 'database_cleaner'
 #  gem 'coderay'
 #  gem 'rspec-rails', '~> 3.4'
-#  gem 'factory_girl_rails', '~> 4.5'
+  gem 'factory_girl_rails', '~> 4.5'
 #  gem 'shoulda-matchers', '~> 3.0'
 #  gem 'simplecov'
 #  gem 'simplecov-console'
