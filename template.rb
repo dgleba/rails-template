@@ -47,7 +47,7 @@ def apply_template!
   # before we initial commit
   run 'bundle update --quiet'
   run 'bin/setup'
-  generate_spring_binstubs
+  #generate_spring_binstubs
 
   # setup git
   git :init
