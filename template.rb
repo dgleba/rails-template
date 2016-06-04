@@ -28,14 +28,14 @@ def apply_template!
 
   apply 'variants/template.rb'
 
-  #dgleba
-  # add additional Gems
-  insert_into_file 'Gemfile', before: 'group :development, :test do' do
-  <<-'RUBY'
-  # dgleba
-  gem 'sqlite3'
-  RUBY
-  end
+  # #dgleba
+  # # add additional Gems
+  # insert_into_file 'Gemfile', before: 'group :development, :test do' do
+  # <<-'RUBY'
+  # # dgleba
+  # gem 'sqlite3'
+  # RUBY
+  # end
 
   copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
   
