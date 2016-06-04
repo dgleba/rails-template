@@ -28,6 +28,14 @@ def apply_template!
 
   apply 'variants/template.rb'
 
+  # add additional Gems
+  insert_into_file 'Gemfile', before: 'group :development, :test do' do
+    <<-'RUBY'
+      # dgleba
+      gem 'sqlite3'
+    RUBY
+  end
+
   # run a final bundle update to have the latest and greatest version of all
   # before we initial commit
   run 'bundle update --quiet'
