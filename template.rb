@@ -18,7 +18,7 @@ def apply_template!
   copy_file 'gitignore', '.gitignore', force: true
   # copy_file 'Procfile'
 
-  # apply 'app/template.rb'
+   apply 'app/template.rb'
   # apply 'config/template.rb'
   # apply 'bin/template.rb'
   # apply 'lib/template.rb'
