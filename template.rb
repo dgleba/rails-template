@@ -5,12 +5,12 @@ def apply_template!
   add_template_repository_to_source_path
 
   # remove_file 'README.rdoc'
-  # template 'README.md.tt', force: true
-  # template 'DEPLOYMENT.md.tt', force: true
+   template 'README.md.tt', force: true
+   template 'DEPLOYMENT.md.tt', force: true
 
-  # template 'Gemfile.tt', force: true
+   template 'Gemfile.tt', force: true
 
-  # template 'example.env.tt', 'example.env'
+   template 'example.env.tt', 'example.env'
   # template 'ruby-version.tt', '.ruby-version'
   # template 'erdconfig.tt', '.erdconfig'
   # copy_file 'rubocop.yml', '.rubocop.yml'
@@ -21,7 +21,7 @@ def apply_template!
    apply 'app/template.rb'
   # apply 'config/template.rb'
   # apply 'bin/template.rb'
-  # apply 'lib/template.rb'
+   apply 'lib/template.rb'
   # apply 'vendor/template.rb'
 
   run 'bundle install --quiet'
