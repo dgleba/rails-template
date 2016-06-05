@@ -4,12 +4,12 @@ def apply_template!
   assert_minimum_rails_version
   add_template_repository_to_source_path
 
+
   remove_file 'README.rdoc'
   template 'README.md.tt', force: true
   template 'DEPLOYMENT.md.tt', force: true
 
   template 'Gemfile.tt', force: true
-  
     
   template 'example.env.tt', 'example.env'
   template 'ruby-version.tt', '.ruby-version'
@@ -19,19 +19,20 @@ def apply_template!
   copy_file 'gitignore', '.gitignore', force: true
   copy_file 'Procfile'
 
+
+  #dgleba
+  copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
+
   apply 'app/template.rb'
   apply 'config/template.rb'
   apply 'bin/template.rb'
   apply 'lib/template.rb'
   #apply 'vendor/template.rb'
+  
 
   run 'bundle install --quiet'
 
   apply 'variants/template.rb'
-
-  
-  #dgleba
-  copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
 
   
   # run a final bundle update to have the latest and greatest version of all
