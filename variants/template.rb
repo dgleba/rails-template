@@ -4,10 +4,10 @@ def apply_variants
 
   
   # my answers. dgleba..
-  apply_twitter_bootstrap = true
-  apply_sorcery_cancancan = true
-  apply_ransack_kaminari = true
-  apply_sidekiq = false
+  @apply_twitter_bootstrap = true
+  @apply_sorcery_cancancan = true
+  @apply_ransack_kaminari = true
+  @apply_sidekiq = false
   
   
   # ask and apply other variants
