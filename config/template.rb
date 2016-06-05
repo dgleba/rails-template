@@ -8,5 +8,5 @@ apply 'config/routes.rb'
 # apply 'config/environments/test.rb'
 # copy_file 'config/environments/staging.rb'
 
-# apply 'config/initializers/template.rb'
+apply 'config/initializers/template.rb'
 # apply 'config/locales/template.rb'
