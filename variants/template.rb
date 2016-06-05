@@ -2,13 +2,21 @@ def apply_variants
   # always apply the default variant
   apply 'variants/default/template.rb'
 
+  
+  # my answers. dgleba..
+  apply_twitter_bootstrap = true
+  apply_sorcery_cancancan = true
+  apply_ransack_kaminari = true
+  apply_sidekiq = false
+  
+  
   # ask and apply other variants
-  # apply 'variants/twitter-bootstrap/template.rb'  if apply_twitter_bootstrap?
+    apply 'variants/twitter-bootstrap/template.rb'  if apply_twitter_bootstrap?
   # apply 'variants/sorcery-cancancan/template.rb'  if apply_sorcery_cancancan?
   # apply 'variants/ransack-kaminari/template.rb'   if apply_ransack_kaminari?
   # apply 'variants/sidekiq/template.rb'            if apply_sidekiq?
   
-  apply 'variants/twitter-bootstrap/template.rb'  
+  # apply 'variants/twitter-bootstrap/template.rb'  
   apply 'variants/sorcery-cancancan/template.rb'  
   apply 'variants/ransack-kaminari/template.rb'   
 end
