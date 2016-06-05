@@ -11,14 +11,15 @@ def apply_variants
   
   
   # ask and apply other variants
-    apply 'variants/twitter-bootstrap/template.rb'  if apply_twitter_bootstrap?
-  # apply 'variants/sorcery-cancancan/template.rb'  if apply_sorcery_cancancan?
-  # apply 'variants/ransack-kaminari/template.rb'   if apply_ransack_kaminari?
-  # apply 'variants/sidekiq/template.rb'            if apply_sidekiq?
+  apply 'variants/twitter-bootstrap/template.rb'  if apply_twitter_bootstrap?
+  apply 'variants/sorcery-cancancan/template.rb'  if apply_sorcery_cancancan?
+  apply 'variants/ransack-kaminari/template.rb'   if apply_ransack_kaminari?
+  apply 'variants/sidekiq/template.rb'            if apply_sidekiq?
   
+  # old remove this. dgleba.
   # apply 'variants/twitter-bootstrap/template.rb'  
-  apply 'variants/sorcery-cancancan/template.rb'  
-  apply 'variants/ransack-kaminari/template.rb'   
+  # apply 'variants/sorcery-cancancan/template.rb'  
+  # apply 'variants/ransack-kaminari/template.rb'   
 end
 
 def apply_twitter_bootstrap?

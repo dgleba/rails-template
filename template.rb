@@ -11,7 +11,7 @@ def apply_template!
    template 'Gemfile.tt', force: true
 
    template 'example.env.tt', 'example.env'
-  # template 'ruby-version.tt', '.ruby-version'
+   template 'ruby-version.tt', '.ruby-version'
   # template 'erdconfig.tt', '.erdconfig'
   # copy_file 'rubocop.yml', '.rubocop.yml'
   # copy_file '.capistrano/metrics'
