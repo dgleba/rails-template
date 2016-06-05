@@ -9,7 +9,9 @@ def apply_template!
   template 'DEPLOYMENT.md.tt', force: true
 
   template 'Gemfile.tt', force: true
-
+  
+  x123,dgleba
+  
   template 'example.env.tt', 'example.env'
   template 'ruby-version.tt', '.ruby-version'
   template 'erdconfig.tt', '.erdconfig'
