@@ -4,50 +4,35 @@ def apply_template!
   assert_minimum_rails_version
   add_template_repository_to_source_path
 
-  # remove_file 'README.rdoc'
-   template 'README.md.tt', force: true
-   template 'DEPLOYMENT.md.tt', force: true
+  remove_file 'README.rdoc'
+  template 'README.md.tt', force: true
+  template 'DEPLOYMENT.md.tt', force: true
 
-   template 'Gemfile.tt', force: true
+  template 'Gemfile.tt', force: true
 
-   template 'example.env.tt', 'example.env'
-   template 'ruby-version.tt', '.ruby-version'
-  # template 'erdconfig.tt', '.erdconfig'
-  # copy_file 'rubocop.yml', '.rubocop.yml'
-  # copy_file '.capistrano/metrics'
+  template 'example.env.tt', 'example.env'
+  template 'ruby-version.tt', '.ruby-version'
+  template 'erdconfig.tt', '.erdconfig'
+  copy_file 'rubocop.yml', '.rubocop.yml'
+  copy_file '.capistrano/metrics'
   copy_file 'gitignore', '.gitignore', force: true
-  # copy_file 'Procfile'
+  copy_file 'Procfile'
 
-   apply 'app/template.rb'
-   apply 'config/template.rb'
-  # apply 'bin/template.rb'
-   apply 'lib/template.rb'
-  # apply 'vendor/template.rb'
+  apply 'app/template.rb'
+  apply 'config/template.rb'
+  apply 'bin/template.rb'
+  apply 'lib/template.rb'
+  apply 'vendor/template.rb'
 
   run 'bundle install --quiet'
 
   apply 'variants/template.rb'
 
-  # #dgleba
-  # # add additional Gems
-  # insert_into_file 'Gemfile', before: 'group :development, :test do' do
-  # <<-'RUBY'
-  # # dgleba
-  # gem 'sqlite3'
-  # RUBY
-  # end
-
-  copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
-  
-  # copy directory
-  #http://www.rubydoc.info/github/erikhuda/thor/master/Thor/Actions:directory
-
-  
   # run a final bundle update to have the latest and greatest version of all
   # before we initial commit
   run 'bundle update --quiet'
   run 'bin/setup'
-  #generate_spring_binstubs
+  generate_spring_binstubs
 
   # setup git
   git :init
@@ -69,7 +54,7 @@ def add_template_repository_to_source_path
     at_exit { FileUtils.remove_entry(tempdir) }
     git clone: [
       '--quiet',
-      'https://github.com/dgleba/rails-template.git',
+      'https://github.com/manuelvanrijn/rails-template.git',
       tempdir
     ].map(&:shellescape).join(' ')
   else
