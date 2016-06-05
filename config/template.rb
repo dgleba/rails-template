@@ -9,4 +9,4 @@ apply 'config/routes.rb'
 # copy_file 'config/environments/staging.rb'
 
 apply 'config/initializers/template.rb'
-# apply 'config/locales/template.rb'
+apply 'config/locales/template.rb'
