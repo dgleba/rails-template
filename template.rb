@@ -4,9 +4,7 @@ def apply_template!
   assert_minimum_rails_version
   add_template_repository_to_source_path
 
-  $repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
-  rake 'rails:template LOCATION=#{$repo1}dg/tpcustomer.rb'
- 
+
   remove_file 'README.rdoc'
   template 'README.md.tt', force: true
   template 'DEPLOYMENT.md.tt', force: true
@@ -44,8 +42,10 @@ def apply_template!
   # before we initial commit
   run 'bundle update --quiet'
   
-  run 'rails generate scaffold User email:string crypted_password:string salt:string --no-migration --skip'
-    
+  apply 'dg/tpcustomer.rb'
+  # $repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
+  # rake 'rails:template LOCATION=#{$repo1}dg/tpcustomer.rb'
+     
  
   #migrate and seed and other things..
   run 'bin/setup'
