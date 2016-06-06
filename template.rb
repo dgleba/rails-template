@@ -34,6 +34,8 @@ def apply_template!
 
   apply 'variants/template.rb'
 
+  #copy sorcery config file..
+  
   
   # run a final bundle update to have the latest and greatest version of all
   # before we initial commit

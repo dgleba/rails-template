@@ -7,7 +7,8 @@ append_to_file 'config/locales/en.yml' do
     logout: Logout
     email: Email address
     password: Password
-    login_created: You need to be signed in
+    1login_created1: You need to be signed in
+    login_created: You are signed in
     login_failed: Failed to sign in
     login_destroyed: Logged out successfully
     login_first: You have to be logged in to see this page
