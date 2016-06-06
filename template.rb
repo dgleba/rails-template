@@ -19,6 +19,8 @@ def apply_template!
   copy_file 'gitignore', '.gitignore', force: true
   copy_file 'Procfile'
 
+  rake 'rails:template LOCATION=https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/dg/tpcustomer.rb'
+ 
 
   #dgleba
   copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
@@ -35,14 +37,19 @@ def apply_template!
   apply 'variants/template.rb'
 
   #copy sorcery config file..
-  
+
   
   # run a final bundle update to have the latest and greatest version of all
   # before we initial commit
   run 'bundle update --quiet'
+  
+  run 'rails generate scaffold User email:string crypted_password:string salt:string --no-migration --skip'
+    
+ 
+  #migrate and seed and other things..
   run 'bin/setup'
   generate_spring_binstubs
-
+  
   # setup git
   git :init
   git add: '.'
