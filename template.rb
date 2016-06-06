@@ -4,8 +4,8 @@ def apply_template!
   assert_minimum_rails_version
   add_template_repository_to_source_path
 
-  repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
-  rake 'rails:template LOCATION= #{repo1}'dg/tpcustomer.rb'
+  $repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
+  rake 'rails:template LOCATION=#{$repo1}dg/tpcustomer.rb'
  
   remove_file 'README.rdoc'
   template 'README.md.tt', force: true
