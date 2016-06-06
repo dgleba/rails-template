@@ -1,3 +1,1 @@
-
-rails 'generate scaffold Customer name:string address:string phone:string discount:float --no-migration --skip'
-
+generate :scaffold 'Customer name:string address:string phone:string discount:float --no-migration --skip'
