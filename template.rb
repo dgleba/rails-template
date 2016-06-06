@@ -4,7 +4,9 @@ def apply_template!
   assert_minimum_rails_version
   add_template_repository_to_source_path
 
-
+  repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
+  rake 'rails:template LOCATION= #{repo1}'dg/tpcustomer.rb'
+ 
   remove_file 'README.rdoc'
   template 'README.md.tt', force: true
   template 'DEPLOYMENT.md.tt', force: true
@@ -19,8 +21,7 @@ def apply_template!
   copy_file 'gitignore', '.gitignore', force: true
   copy_file 'Procfile'
 
-  rake 'rails:template LOCATION=https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/dg/tpcustomer.rb'
- 
+
 
   #dgleba
   copy_file 'db/seeds.rb', 'db/seeds.rb', force: true
