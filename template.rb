@@ -42,6 +42,9 @@ def apply_template!
   # before we initial commit
   run 'bundle update --quiet'
   
+  
+  run 'rails generate scaffold User email:string crypted_password:string salt:string --no-migration --skip'
+
   apply 'dg/tpcustomer.rb'
   # $repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
   # rake 'rails:template LOCATION=#{$repo1}dg/tpcustomer.rb'
