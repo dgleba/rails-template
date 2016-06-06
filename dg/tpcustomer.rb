@@ -1,1 +1,2 @@
-generate:scaffold "Customer name:string address:string phone:string discount:float --no-migration --skip"
+  run 'rails generate scaffold User email:string crypted_password:string salt:string --no-migration --skip'
+ 
