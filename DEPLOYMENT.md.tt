@@ -1,5 +1,7 @@
 # How to deploy <%= app_name %>
 
+# 2016-06-08 David Gleba I will rewrite this. I removed capistrano
+
 ## Capistrano
 
 ### Environments
