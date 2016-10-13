@@ -4,8 +4,6 @@
 1471090620|DEPLOYMENT.md.tt
 1471090922|Gemfile.tt
 1465003624|Procfile
-1465003624|README.md
-1465003624|README.md.tt
 1465003624|app/assets/stylesheets/_components.sass
 1465003624|app/assets/template.rb
 1465003624|app/controllers/application_controller.rb
@@ -131,5 +129,6 @@
 1465003625|variants/twitter-bootstrap/template.rb
 1465003625|vendor/assets/.bowerrc
 1465003625|vendor/template.rb
-1476323317|.mtimes
 1473700654|template.rb
+1476324828|README.md
+1476324894|git-note.txt
