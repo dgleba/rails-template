@@ -52,7 +52,7 @@ def apply_template!
  
   #migrate and seed and other things..
   run 'bin/setup'
-  generate_spring_binstubs
+  #generate_spring_binstubs
   
   # setup git
   git :init
