@@ -1,7 +1,7 @@
 
 # Notes by David Gleba
 
-I forked this repo and simplified it so I could understand it.
+I forked this repo and I stripped things out so I could understand it. Many Thanks to the orignator Manuel van Rijn.
 
 It is at:  `https://github.com/dgleba/rails-template-dg1`
 
@@ -9,12 +9,12 @@ I call it `railt251b`   `c:...\rails-know\railt251b`
  
  ---
 
-
 # Original Project by manuelvanrijn
 # Rails template with variants
 
-Simple template to bootstrap the stuff I always use (and some variants I might need) in a new Rails project.
+https://github.com/manuelvanrijn/rails-template
 
+Simple template to bootstrap the stuff I always use (and some variants I might need) in a new Rails project.
 
 
 ## Prerequisites
